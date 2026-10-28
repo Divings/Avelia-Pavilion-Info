@@ -7,6 +7,7 @@ Avelia Pavilionの製品情報とWebAdmin追加パッチを公開するリポジ
 ## 構成
 
 - doc/: GitHub Pages向け静的HTML・CSS・JavaScriptと画像。
+- patches/pdf-preview/: PDFプレビューパッチ、説明、SHA-256。
 - patches/image-preview/: 画像プレビューパッチ、説明、SHA-256。
 - patches/directory-protection/: ディレクトリ保護パッチFixed版、説明、SHA-256。
 - scripts/build.py: docとpatchesを_siteへ組み立てます。
@@ -60,3 +61,7 @@ publish_releases.pyは引数なしでは発行予定を表示するだけです�
 リリース発行とPages公開は独立したジョブのため、数分間だけ一覧のGitHub Releaseリンクが先に表示される場合があります。失敗はGitHub Actions上で確認してください。
 
 公式資料: [GitHub CLI in workflows](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli)、[Release API](https://docs.github.com/en/rest/releases/releases)。
+
+## PDFプレビュー追加（2026-10-28）
+
+patches/pdf-preview/に追加しました。画像プレビュー＋ディレクトリ保護構成への適用・構文確認後、利用者よりテストPDFの動作確認完了報告を受けています。ZIP追加により自動リリースとリリース一覧の対象になります。
