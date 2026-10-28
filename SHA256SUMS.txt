@@ -1,0 +1,2 @@
+63c6ee96ec27054dfef374f5087f8e04a3f89dbf0b08d539627b7fe959b37443  patches/directory-protection/Avelia_Folder_Protection_Patch_Fixed.zip
+1a615f3499fc51484ce7373eedb5199a1edf36f25edfe6352120121bcd26a9a2  patches/image-preview/Avelia_Image_Preview_Patch.zip
