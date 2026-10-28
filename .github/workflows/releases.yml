@@ -1,0 +1,33 @@
+name: Publish patch releases
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'patches/**'
+      - 'scripts/release_catalog.py'
+      - 'scripts/publish_releases.py'
+      - 'scripts/test_releases.py'
+      - '.github/workflows/releases.yml'
+      - 'SHA256SUMS.txt'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: patch-releases
+  cancel-in-progress: false
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Verify archives and links
+        run: python3 scripts/validate.py
+      - name: Test release safeguards
+        run: python3 -m unittest discover -s scripts -p 'test_releases.py'
+      - name: Create missing releases and attach verified assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/publish_releases.py --publish
