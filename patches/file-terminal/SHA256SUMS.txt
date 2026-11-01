@@ -1,1 +1,2 @@
 f6684235ca29bc401bc241960a7a212d0fe774cf7eea72be3b8cafc2a73ba03f  Avelia_APFT_1.4_Version_Fix.zip
+9a7e1e31ce959d078f646e98064aec7511e8ffbef935ef20244cc4a3bcaeac45  Avelia_APFT_Crypto_Patch_1.5.zip
